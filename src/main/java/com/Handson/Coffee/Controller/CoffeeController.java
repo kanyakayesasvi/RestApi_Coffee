@@ -4,11 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.convert.ReadingConverter;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.Handson.Coffee.Enitity.CoffeeCatalog;
 import com.Handson.Coffee.Service.CoffeeService;
 
-@ReadingConverter
+@RestController
 public class CoffeeController {
 	@Autowired
 	private CoffeeService service;
@@ -19,7 +20,3 @@ public class CoffeeController {
         return this.service.makeProduct(button);
     }
 }
-
-	
-
-
